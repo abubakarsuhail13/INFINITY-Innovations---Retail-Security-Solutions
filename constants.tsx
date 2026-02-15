@@ -10,7 +10,8 @@ import {
   Briefcase,
   Lock,
   Zap,
-  BarChart3
+  Eye,
+  Activity
 } from 'lucide-react';
 
 export const NAV_LINKS = [
@@ -19,6 +20,27 @@ export const NAV_LINKS = [
   { label: 'About', href: '#about' },
   { label: 'Industries', href: '#industries' },
   { label: 'Contact', href: '#contact' },
+];
+
+export const HERO_SLIDES = [
+  {
+    image: 'https://images.unsplash.com/photo-1600673881647-1558866ad131?auto=format&fit=crop&q=80&w=1200',
+    tag: 'RELIABILITY',
+    caption: 'Providing 24/7 technical oversight across major UAE shopping hubs.',
+    icon: <Lock className="text-infinity-red" size={28} />
+  },
+  {
+    image: 'https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&q=80&w=1200',
+    tag: 'VISIBILITY',
+    caption: 'Enterprise CCTV systems with AI-driven behavioral analytics.',
+    icon: <Eye className="text-infinity-blue" size={28} />
+  },
+  {
+    image: 'https://images.unsplash.com/photo-1592890288564-76628a30a657?auto=format&fit=crop&q=80&w=1200',
+    tag: 'INTERACTION',
+    caption: 'Empowering customers with high-security open display solutions.',
+    icon: <Activity className="text-infinity-azure" size={28} />
+  }
 ];
 
 export const CORE_VALUES = [
@@ -53,7 +75,7 @@ export const PRODUCT_CATEGORIES = [
       'Stop Locks for Display Hooks',
       'Professional Tag Detachers'
     ],
-    image: 'https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&q=80&w=1200'
+    image: 'https://images.unsplash.com/photo-1542744173-05336fcc7ad4?auto=format&fit=crop&q=80&w=1200'
   },
   {
     id: 'open',
@@ -117,7 +139,7 @@ export const NEWS = [
     excerpt: 'How INFINITY Innovations is transforming the retail landscape with next-gen anti-theft solutions in Silicon Oasis.',
     date: 'Jan 12, 2024',
     author: 'Admin',
-    image: 'https://images.unsplash.com/photo-1556742044-3c52d6e88c02?auto=format&fit=crop&q=80&w=1200'
+    image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=1200'
   },
   {
     title: 'The Rise of Open Display Security',

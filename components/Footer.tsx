@@ -7,7 +7,6 @@ export const Footer: React.FC = () => {
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-20 mb-28">
           
-          {/* Logo Column */}
           <div className="flex flex-col">
             <div className="flex items-center space-x-4 mb-10">
                 <div className="w-12 h-12 bg-infinity-navy rounded-xl flex items-center justify-center shadow-lg border border-slate-700/50">
@@ -26,7 +25,6 @@ export const Footer: React.FC = () => {
             </p>
           </div>
 
-          {/* Contact Column */}
           <div>
             <h4 className="text-xs font-black text-infinity-navy uppercase tracking-[0.4em] mb-10">Headquarters</h4>
             <div className="space-y-6">
@@ -36,13 +34,16 @@ export const Footer: React.FC = () => {
                   Silicon Oasis, Dubai, UAE
                </p>
                <div className="space-y-2">
-                 <p className="text-infinity-blue font-black text-sm tracking-wide">+971 4 392 2994</p>
-                 <p className="text-infinity-blue font-black text-sm tracking-wide">+971 50 520 4614</p>
+                 <p className="text-infinity-blue font-black text-sm tracking-wide group cursor-default">
+                   Tel: <span className="hover:text-infinity-red transition-colors">+971 4 392 2994</span>
+                 </p>
+                 <p className="text-infinity-blue font-black text-sm tracking-wide group cursor-default">
+                   Mob: <span className="hover:text-infinity-red transition-colors">+971 50 520 4614</span>
+                 </p>
                </div>
             </div>
           </div>
 
-          {/* Links Column */}
           <div>
             <h4 className="text-xs font-black text-infinity-navy uppercase tracking-[0.4em] mb-10">Ecosystem</h4>
             <ul className="grid grid-cols-1 gap-5">
@@ -56,16 +57,15 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Newsletter Column */}
           <div>
             <h4 className="text-xs font-black text-infinity-navy uppercase tracking-[0.4em] mb-10">Stay Connected</h4>
             <p className="text-slate-400 text-xs font-medium mb-8 leading-relaxed max-w-[200px]">
               Subscribe for the latest trends in Middle Eastern retail security.
             </p>
             <div className="flex gap-5">
-               <a href="#" className="w-12 h-12 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 hover:border-infinity-blue hover:text-infinity-blue transition-all cursor-pointer font-black text-sm">FB</a>
-               <a href="#" className="w-12 h-12 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 hover:border-infinity-blue hover:text-infinity-blue transition-all cursor-pointer font-black text-sm">LN</a>
-               <a href="#" className="w-12 h-12 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 hover:border-infinity-blue hover:text-infinity-blue transition-all cursor-pointer font-black text-sm">IG</a>
+               <a href="#" className="w-12 h-12 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 hover:border-infinity-blue hover:text-infinity-blue transition-all cursor-pointer font-black text-[10px]">FB</a>
+               <a href="#" className="w-12 h-12 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 hover:border-infinity-blue hover:text-infinity-blue transition-all cursor-pointer font-black text-[10px]">LN</a>
+               <a href="#" className="w-12 h-12 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 hover:border-infinity-blue hover:text-infinity-blue transition-all cursor-pointer font-black text-[10px]">IG</a>
             </div>
           </div>
         </div>
@@ -78,7 +78,7 @@ export const Footer: React.FC = () => {
             </div>
             
             <div className="text-[11px] font-black uppercase tracking-[0.3em] text-slate-400">
-               Powered by <a href="http://www.nexaforgetech.com" target="_blank" rel="noopener noreferrer" className="text-infinity-blue hover:underline underline-offset-4">Nexaforge Technologies</a>
+               Powered by <a href="https://www.nexaforgetech.com" target="_blank" rel="noopener noreferrer" className="text-infinity-blue hover:underline underline-offset-4 transition-all">Nexaforge Technologies</a>
             </div>
         </div>
       </div>
