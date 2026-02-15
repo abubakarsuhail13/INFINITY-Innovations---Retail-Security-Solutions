@@ -5,40 +5,39 @@ import { INDUSTRIES } from '../constants';
 
 export const Industries: React.FC = () => {
   return (
-    <section id="industries" className="py-32 bg-[#F1F5F9] relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute top-0 left-0 w-full h-full tech-grid-bg opacity-40 pointer-events-none"></div>
+    <section id="industries" className="py-28 bg-[#F1F5F9] relative overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-full tech-grid-bg opacity-30 pointer-events-none"></div>
       
       <div className="container mx-auto px-6 relative z-10">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-24 max-w-3xl mx-auto"
+          className="text-center mb-20 max-w-3xl mx-auto"
         >
-          <h2 className="text-5xl md:text-6xl font-black text-infinity-navy mb-8 tracking-tighter leading-tight">Industries We Serve</h2>
-          <p className="text-slate-500 font-medium text-xl leading-relaxed opacity-80">
-            Versatile security solutions for diverse business sectors, ensuring maximum ROI through intelligent loss prevention.
+          <h2 className="text-4xl md:text-5xl font-black text-infinity-navy mb-6 tracking-tighter leading-tight">Industries We Serve</h2>
+          <p className="text-slate-500 font-medium text-lg leading-relaxed opacity-80">
+            Versatile security solutions tailored for diverse sectors, ensuring intelligent loss prevention and maximum asset protection.
           </p>
         </motion.div>
         
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
           {INDUSTRIES.map((ind, idx) => (
             <motion.div
               key={idx}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: idx * 0.1, duration: 0.6 }}
-              whileHover={{ y: -12, scale: 1.02 }}
-              className="flex flex-col items-center p-10 bg-white rounded-[40px] text-center shadow-[0_20px_50px_-15px_rgba(15,23,42,0.08)] hover:shadow-[0_30px_70px_-15px_rgba(59,130,246,0.15)] transition-all duration-500 group border border-white"
+              transition={{ delay: idx * 0.05 }}
+              whileHover={{ y: -8 }}
+              className="flex flex-col items-center p-8 bg-white rounded-[32px] text-center shadow-sm hover:shadow-xl transition-all duration-300 group border border-slate-100"
             >
-              <div className="w-20 h-20 bg-slate-50 rounded-[28px] flex items-center justify-center text-infinity-blue mb-8 group-hover:bg-infinity-blue group-hover:text-white transition-all duration-300 shadow-sm">
-                <div className="transform transition-transform duration-500 group-hover:scale-110">
+              <div className="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center text-infinity-blue mb-6 group-hover:bg-infinity-blue group-hover:text-white transition-all">
+                <div className="transform transition-transform duration-300 group-hover:scale-110">
                   {ind.icon}
                 </div>
               </div>
-              <span className="font-bold text-base tracking-tight text-infinity-navy group-hover:text-infinity-blue transition-colors">
+              <span className="font-bold text-sm tracking-tight text-infinity-navy uppercase">
                 {ind.name}
               </span>
             </motion.div>
