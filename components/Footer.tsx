@@ -29,16 +29,16 @@ export const Footer: React.FC = () => {
             <h4 className="text-xs font-black text-infinity-navy uppercase tracking-[0.4em] mb-10">Headquarters</h4>
             <div className="space-y-6">
                <p className="text-slate-500 text-sm leading-relaxed font-semibold uppercase tracking-wider">
-                  Office 105, A.S.B Tower<br />
-                  Opposite Silicon Central Mall<br />
-                  Silicon Oasis, Dubai, UAE
+                  Innovation Tower, Floor 12<br />
+                  Business Bay District<br />
+                  Dubai, UAE
                </p>
                <div className="space-y-2">
                  <p className="text-infinity-blue font-black text-sm tracking-wide group cursor-default">
-                   Tel: <span className="hover:text-infinity-red transition-colors">+971 4 392 2994</span>
+                   Tel: <span className="hover:text-infinity-red transition-colors">+971 4 000 0000</span>
                  </p>
                  <p className="text-infinity-blue font-black text-sm tracking-wide group cursor-default">
-                   Mob: <span className="hover:text-infinity-red transition-colors">+971 50 520 4614</span>
+                   Mob: <span className="hover:text-infinity-red transition-colors">+971 50 000 0000</span>
                  </p>
                </div>
             </div>

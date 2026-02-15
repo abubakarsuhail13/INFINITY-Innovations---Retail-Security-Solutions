@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-// Added Shield to the list of imported icons from lucide-react
 import { MapPin, Phone, Mail, MessageCircle, Send, Clock, Building, Shield } from 'lucide-react';
 
 export const Contact: React.FC = () => {
@@ -26,7 +25,7 @@ export const Contact: React.FC = () => {
                   </div>
                   <div>
                     <p className="font-black uppercase tracking-[0.2em] text-[11px] mb-2 text-slate-400">Headquarters</p>
-                    <p className="text-slate-200 text-sm leading-relaxed font-medium">Office 105, A.S.B. Tower, Dubai Silicon Oasis, Dubai, UAE</p>
+                    <p className="text-slate-200 text-sm leading-relaxed font-medium">Innovation Tower, Floor 12, Tech District, Dubai, UAE</p>
                   </div>
                 </div>
 
@@ -47,16 +46,15 @@ export const Contact: React.FC = () => {
                   </div>
                   <div>
                     <p className="font-black uppercase tracking-[0.2em] text-[11px] mb-2 text-slate-400">Direct Contact</p>
-                    <p className="text-slate-200 text-sm font-bold tracking-wide">+971 4 392 2994</p>
-                    <p className="text-slate-200 text-sm font-bold tracking-wide">+971 50 520 4614</p>
+                    <p className="text-slate-200 text-sm font-bold tracking-wide">+971 4 000 0000</p>
+                    <p className="text-slate-200 text-sm font-bold tracking-wide">+971 50 000 0000</p>
                   </div>
                 </div>
               </div>
 
               <div className="mt-20">
                 <a 
-                  href="https://wa.me/971505204614" 
-                  target="_blank" 
+                  href="#" 
                   className="inline-flex items-center gap-4 bg-emerald-600 hover:bg-emerald-500 text-white px-10 py-6 rounded-xl font-black text-xs uppercase tracking-widest transition-all shadow-2xl shadow-emerald-900/40"
                 >
                   <MessageCircle size={22} strokeWidth={2.5} />
