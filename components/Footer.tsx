@@ -1,14 +1,20 @@
 
 import React from 'react';
+import { motion } from 'framer-motion';
 import { NAV_LINKS } from '../constants';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-white pt-24 pb-12 border-t border-slate-100">
+    <footer className="bg-white pt-24 pb-12 border-t border-slate-100 overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
           
-          <div className="flex flex-col">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="flex flex-col"
+          >
             <div className="flex items-center space-x-3 mb-8">
                 <div className="w-10 h-10 bg-infinity-navy rounded-lg flex items-center justify-center shadow-lg border border-slate-700/50">
                    <svg viewBox="0 0 100 100" className="w-6 h-6">
@@ -24,9 +30,14 @@ export const Footer: React.FC = () => {
             <p className="text-slate-400 text-xs leading-relaxed font-medium mb-4">
               © 2024, INFINITY Innovations General Trading LLC. <br />Premier Retail Security Provider.
             </p>
-          </div>
+          </motion.div>
 
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+          >
             <h4 className="text-[10px] font-black text-infinity-navy uppercase tracking-[0.4em] mb-8">Headquarters</h4>
             <div className="space-y-4">
                <p className="text-slate-500 text-xs leading-relaxed font-semibold uppercase tracking-wider">
@@ -43,9 +54,14 @@ export const Footer: React.FC = () => {
                  </p>
                </div>
             </div>
-          </div>
+          </motion.div>
 
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+          >
             <h4 className="text-[10px] font-black text-infinity-navy uppercase tracking-[0.4em] mb-8">Quick Navigation</h4>
             <ul className="grid grid-cols-1 gap-4">
               {NAV_LINKS.map(link => (
@@ -56,32 +72,49 @@ export const Footer: React.FC = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </motion.div>
 
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+          >
             <h4 className="text-[10px] font-black text-infinity-navy uppercase tracking-[0.4em] mb-8">Stay Connected</h4>
             <p className="text-slate-400 text-[10px] font-medium mb-6 leading-relaxed max-w-[200px]">
               Subscribe for regional trends in Middle Eastern retail security solutions.
             </p>
             <div className="flex gap-4">
                {['FB', 'LN', 'IG'].map(social => (
-                 <a key={social} href="#" className="w-10 h-10 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 hover:border-infinity-blue hover:text-infinity-blue transition-all cursor-pointer font-black text-[9px]">{social}</a>
+                 <motion.a 
+                    key={social} 
+                    whileHover={{ y: -3, scale: 1.1 }}
+                    href="#" 
+                    className="w-10 h-10 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 hover:border-infinity-blue hover:text-infinity-blue transition-all cursor-pointer font-black text-[9px]"
+                 >
+                    {social}
+                 </motion.a>
                ))}
             </div>
-          </div>
+          </motion.div>
         </div>
 
-        <div className="pt-12 border-t border-slate-50 flex flex-col md:flex-row justify-between items-center gap-6">
+        <motion.div 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="pt-12 border-t border-slate-50 flex flex-col md:flex-row justify-between items-center gap-6"
+        >
             <div className="flex gap-8">
                {['Privacy Policy', 'Terms of Service', 'UAE Compliance'].map(item => (
                  <a key={item} href="#" className="text-[10px] font-black uppercase tracking-widest text-slate-400 hover:text-infinity-navy transition-colors">{item}</a>
                ))}
             </div>
             
-            <div className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-300">
-               Secured by <span className="text-infinity-navy">INFINITY Tech</span>
+            <div className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400">
+               Powered by <a href="https://www.nexaforgetech.com" target="_blank" rel="noopener noreferrer" className="text-infinity-blue hover:text-infinity-navy transition-colors">Nexaforge Technologies</a>
             </div>
-        </div>
+        </motion.div>
       </div>
     </footer>
   );

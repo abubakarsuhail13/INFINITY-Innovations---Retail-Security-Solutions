@@ -21,13 +21,13 @@ export const Hero: React.FC = () => {
     hidden: { opacity: 0 },
     visible: { 
       opacity: 1,
-      transition: { staggerChildren: 0.15, delayChildren: 0.1 }
+      transition: { staggerChildren: 0.15, delayChildren: 0.2 }
     }
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } }
   };
 
   return (
@@ -80,9 +80,9 @@ export const Hero: React.FC = () => {
 
           <div className="relative group">
             <motion.div
-              initial={{ opacity: 0, scale: 0.98, x: 20 }}
+              initial={{ opacity: 0, scale: 0.95, x: 30 }}
               animate={{ opacity: 1, scale: 1, x: 0 }}
-              transition={{ duration: 1, ease: "circOut" }}
+              transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
               className="relative"
             >
               <div className="relative z-10 p-4 bg-white rounded-[48px] shadow-2xl border border-slate-100 overflow-hidden">
@@ -92,10 +92,10 @@ export const Hero: React.FC = () => {
                       key={current}
                       src={HERO_SLIDES[current].image}
                       alt="Security Application"
-                      initial={{ opacity: 0, scale: 1.05 }}
+                      initial={{ opacity: 0, scale: 1.1 }}
                       animate={{ opacity: 1, scale: 1 }}
-                      exit={{ opacity: 0, scale: 0.98 }}
-                      transition={{ duration: 0.8, ease: "easeInOut" }}
+                      exit={{ opacity: 0, scale: 1.05 }}
+                      transition={{ duration: 1, ease: "easeInOut" }}
                       className="absolute inset-0 w-full h-full object-cover"
                     />
                   </AnimatePresence>
@@ -105,9 +105,10 @@ export const Hero: React.FC = () => {
                 <AnimatePresence mode="wait">
                   <motion.div 
                     key={current}
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
+                    exit={{ opacity: 0, y: 15 }}
+                    transition={{ duration: 0.6, ease: [0.34, 1.56, 0.64, 1] }}
                     className="absolute bottom-10 left-10 right-10 p-6 bg-white/95 backdrop-blur-sm rounded-3xl shadow-xl border border-slate-50 z-20 hidden md:block"
                   >
                      <div className="flex items-center gap-4 mb-3">

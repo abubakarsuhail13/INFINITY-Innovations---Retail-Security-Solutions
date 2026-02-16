@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Phone, Mail, MessageCircle, Send, Clock, Building, Shield } from 'lucide-react';
+import { Phone, Send, Clock, Building, Shield } from 'lucide-react';
 
 export const Contact: React.FC = () => {
   return (
@@ -50,16 +50,6 @@ export const Contact: React.FC = () => {
                     <p className="text-slate-200 text-sm font-bold tracking-wide">+971 50 000 0000</p>
                   </div>
                 </div>
-              </div>
-
-              <div className="mt-20">
-                <a 
-                  href="#" 
-                  className="inline-flex items-center gap-4 bg-emerald-600 hover:bg-emerald-500 text-white px-10 py-6 rounded-xl font-black text-xs uppercase tracking-widest transition-all shadow-2xl shadow-emerald-900/40"
-                >
-                  <MessageCircle size={22} strokeWidth={2.5} />
-                  Immediate WhatsApp Support
-                </a>
               </div>
             </div>
 
